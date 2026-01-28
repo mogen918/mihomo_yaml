@@ -28,12 +28,8 @@ function main(config) {
       filter: "(?i)新加坡|Singapore|SG|🇸🇬|日本|Japan|JP|🇯🇵|美国|USA|US|🇺🇸",
       // 如果没有匹配到节点，回退到主策略
       proxies: ["🚀 节点选择"],
-    },
-    {
-      name: "Telegram",
-      type: "select",
-      proxies: ["🚀 节点选择", "♻️ 自动选择"],
     }
+
     
   ];
 
@@ -45,96 +41,15 @@ function main(config) {
   
   config["rule-providers"] = Object.assign(config["rule-providers"], {
     // 基础分类
-    private: {
-      url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.yaml",
-      path: "./ruleset/private.yaml",
+    ai: {
+      url: "https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs",
+      //path: "./ruleset/private.yaml",
       behavior: "domain",
       interval: 86400,
-      format: "yaml",
+      format: "mrs",
       type: "http",
     },
-    cn_domain: {
-      url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.yaml",
-      path: "./ruleset/cn_domain.yaml",
-      behavior: "domain",
-      interval: 86400,
-      format: "yaml",
-      type: "http",
-    },
-    "geolocation-!cn": {
-      url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-!cn.yaml",
-      path: "./ruleset/geolocation-!cn.yaml",
-      behavior: "domain",
-      interval: 86400,
-      format: "yaml",
-      type: "http",
-    },
-    cn_ip: {
-      url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cn.yaml",
-      path: "./ruleset/cn_ip.yaml",
-      behavior: "ipcidr",
-      interval: 86400,
-      format: "yaml",
-      type: "http",
-    },
-    // 应用分类
-    telegram_domain: {
-      url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.yaml",
-      path: "./ruleset/telegram_domain.yaml",
-      behavior: "domain",
-      interval: 86400,
-      format: "yaml",
-      type: "http",
-    },
-    telegram_ip: {
-      url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/telegram.yaml",
-      path: "./ruleset/telegram_ip.yaml",
-      behavior: "ipcidr",
-      interval: 86400,
-      format: "yaml",
-      type: "http",
-    },
-    google_domain: {
-      url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.yaml",
-      path: "./ruleset/google_domain.yaml",
-      behavior: "domain",
-      interval: 86400,
-      format: "yaml",
-      type: "http",
-    },
-    google_ip: {
-      url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/google.yaml",
-      path: "./ruleset/google_ip.yaml",
-      behavior: "ipcidr",
-      interval: 86400,
-      format: "yaml",
-      type: "http",
-    },
-    // AI 规则集
-    openai: {
-      url: "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml",
-      path: "./ruleset/openai.yaml",
-      behavior: "classical",
-      interval: 86400,
-      format: "yaml",
-      type: "http",
-    },
-    claude: {
-      url: "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Claude/Claude.yaml",
-      path: "./ruleset/claude.yaml",
-      behavior: "classical",
-      interval: 86400,
-      format: "yaml",
-      type: "http",
-    },
-    bing: {
-      url: "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bing/Bing.yaml",
-      path: "./ruleset/bing.yaml",
-      behavior: "classical",
-      interval: 86400,
-      format: "yaml",
-      type: "http",
-    },
+
   });
 
   // 3. 规则匹配 (Rules)
