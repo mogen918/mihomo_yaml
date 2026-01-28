@@ -6,7 +6,7 @@ function main(config) {
       name: "🚀 节点选择",
       type: "select",
       "include-all": true, // 包含所有节点
-      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
+
       proxies: ["♻️ 自动选择", "DIRECT"],
     },
     {
@@ -16,7 +16,7 @@ function main(config) {
       interval: 300,
       tolerance: 50,
       "include-all": true,
-      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
+
     },
     {
       name: "✈️ AI服务",
