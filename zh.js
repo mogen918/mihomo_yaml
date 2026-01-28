@@ -33,12 +33,8 @@ function main(config) {
       name: "Telegram",
       type: "select",
       proxies: ["🚀 节点选择", "♻️ 自动选择"],
-    },
-    {
-      name: "Google",
-      type: "select",
-      proxies: ["🚀 节点选择", "♻️ 自动选择"],
     }
+    
   ];
 
   // 2. 定义规则集 (Rule Providers)
