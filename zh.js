@@ -63,31 +63,8 @@ function main(config) {
     "DOMAIN-SUFFIX,jpcdn.longemby.com,DIRECT",
     
     // --- 规则集匹配 ---
-    "RULE-SET,private,DIRECT",
-    
-    // AI 相关走 AI服务 组
-    "RULE-SET,openai,✈️ AI服务",
-    "RULE-SET,claude,✈️ AI服务",
-    "RULE-SET,bing,✈️ AI服务",
-    
-    // Telegram
-    "RULE-SET,telegram_domain,Telegram",
-    "RULE-SET,telegram_ip,Telegram",
-    
-    // Google
-    "RULE-SET,google_domain,Google",
-    "RULE-SET,google_ip,Google",
-    
-    // 你的特定 IP 规则 (Google CN IP等建议直连或走代理，这里按你原逻辑走代理)
-    "DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🚀 节点选择",
-    "DOMAIN-SUFFIX,services.googleapis.cn,🚀 节点选择",
-    
-    // 兜底非 CN 走代理
-    "RULE-SET,geolocation-!cn,🚀 节点选择",
-    
-    // CN 域名和 IP 直连
-    "RULE-SET,cn_domain,DIRECT",
-    "RULE-SET,cn_ip,DIRECT",
+    "RULE-SET,ai,✈️ AI服务",
+   
     
     // 局域网防止漏网
     "IP-CIDR,0.0.0.0/8,DIRECT,no-resolve",
